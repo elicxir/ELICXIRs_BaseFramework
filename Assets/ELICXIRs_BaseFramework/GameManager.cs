@@ -3,28 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //GameManagerのシングルトン化
     public static GameManager Game_Manager;
 
-    [HideInInspector]public InputSystemManager Input;
+    [HideInInspector] public InputSystemManager Input;
+
+
 
     public bool DebugMode;
 
 
-    public gamestate GameState
-    {
-        get
-        {
-            return Now_GameState;
-        }
-    }
+    public gamestate GameState => Now_GameState;
+
+    public gamescene GameScene => Now_GameScene;
 
     gamestate Now_GameState = gamestate.Undefined;
     gamestate Pre_GameState = gamestate.Undefined;
     gamestate Next_GameState = gamestate.Undefined;
+
+    gamescene Now_GameScene = gamescene.Scene1;
+    gamescene Next_GameScene = gamescene.GameManager;
+
+
+
+
 
     [EnumIndex(typeof(gamestate))] [SerializeField] GameStateExecuter[] Executers;
 
@@ -110,21 +115,16 @@ public class GameManager : MonoBehaviour
 
         foreach (var item in exs)
         {
-            if (item.name == "GameManager")
+            for (int i = 0; i < Enum.GetNames(typeof(gamestate)).Length; i++)
             {
-                Executers[0] = item;
-            }
-            else
-            {
-                for (int i = 1; i < Enum.GetNames(typeof(gamestate)).Length; i++)
+                if (item.name == ((gamestate)i).ToString())
                 {
-                    if(item.name== ((gamestate)i).ToString())
-                    {
-                        Executers[i] = item;
-                    }
+                    Executers[i] = item;
                 }
             }
         }
+
+        Executers[1] = SMF.Get_Scene_Executer();
     }
 
 
@@ -132,26 +132,35 @@ public class GameManager : MonoBehaviour
     {
         if (Input == null)
         {
-            Input= GetComponentInChildren<InputSystemManager>();
+            Input = GetComponentInChildren<InputSystemManager>();
         }
 
-        if (Executers.Length != Enum.GetNames(typeof(gamestate)).Length)
+        for (int i = 0; i < Executers.Count(); i++)
         {
-            Debug.LogError("Executers.Length must be same as the number of gamestate");
-        }
-
-        foreach (var item in Executers)
-        {
-            if (item == null)
+            if (Executers[i] == null&&i!=1)
             {
                 Debug.LogError("GameStateExecuter is null");
             }
         }
 
-
-
-
     }
+
+    //以下参照エラー検出用関数群
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -173,23 +182,34 @@ public class GameManager : MonoBehaviour
     {
         Input.Init();
 
-        StateQueue((int)gamestate.Title);
+        StateQueue(gamestate.Title);
 
     }
 
-    public void StateQueue(int to = -1)
+
+
+    public void StateQueue(gamestate state = gamestate.Undefined)
     {
         statequeueflag = true;
-        if (to == -1)
+        if (state == gamestate.Undefined)
         {
             Next_GameState = Pre_GameState;
         }
         else
         {
-            Next_GameState = (gamestate)to;
+            Next_GameState = state;
         }
     }
     bool statequeueflag = false;
+
+
+
+
+
+
+
+
+
 
     IEnumerator StateChange()
     {
@@ -260,13 +280,56 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("c")]
+    void CheckScene()
+    {
+        print(SceneManager.GetSceneByBuildIndex(0).isLoaded);
+        print(SceneManager.GetSceneByBuildIndex(1).isLoaded);
+        print(SceneManager.GetSceneAt(0).name);
+        print(SceneManager.GetSceneAt(1).name);
+        print(SceneManager.GetSceneAt(2).name);
+        print(SceneManager.GetSceneAt(3).name);
+
+
+    }
+
+
 }
 
 
 public enum gamestate
 {
     Undefined,
-
-    Title,
+    Scene,
+    Loading,
     MainGame,
+    Title,
+}
+
+public enum gamescene
+{
+    GameManager,
+    Scene1,
+    Scene2,
+}
+
+//SceneManagementFunctions
+public class SMF
+{    
+
+    public static Scene_Executer Get_Scene_Executer()
+    {
+        GameObject @object = GameObject.FindGameObjectWithTag("SceneExecuter");
+        if (@object != null)
+        {
+            if (@object.scene == SceneManager.GetSceneByBuildIndex((int)GameManager.Game_Manager.GameScene))
+            {
+                return @object.GetComponent<Scene_Executer>();
+            }
+        }
+
+        Debug.Log("SeceneExecuterError");
+        return null;
+
+    }
 }

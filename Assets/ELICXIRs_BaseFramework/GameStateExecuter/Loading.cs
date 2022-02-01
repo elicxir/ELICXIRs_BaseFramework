@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Title : GameStateExecuter_Panel
+public class Loading : GameStateExecuter_Panel
 {
-
     public override IEnumerator Init(gamestate before)
     {
         CanvasGroup.alpha = 1;
@@ -15,15 +14,11 @@ public class Title : GameStateExecuter_Panel
 
     public override IEnumerator Finalizer(gamestate after)
     {
-        yield return StartCoroutine(GM.FadeOut(0.3f));
+        yield return null;
         CanvasGroup.alpha = 0;
     }
 
     public override void Updater()
     {
-        if(GM.Input.ButtonDown(Control.Button1)){
-            GM.StateQueue((int)gamestate.MainGame);
-        }
     }
-
 }

@@ -12,7 +12,6 @@ public class GameStateExecuter : MonoBehaviour
         }
     }
 
-
     //‚±‚ÌGameState‚ªŠJn‚³‚ê‚½Û‚ÉŒÄ‚Î‚ê‚Ü‚·B
     public virtual IEnumerator Init(gamestate before)
     {
