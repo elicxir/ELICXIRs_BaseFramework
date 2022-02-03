@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //gamestateのみを変更する場合
+    //gamestateとgamesceneを変更可能 指定しない場合は直前stateへ戻りシーン変更は行われない
     public void StateQueue(gamestate state = gamestate.Undefined, gamescene scene = gamescene.GameManager)
     {
         if (scene == gamescene.GameManager)
