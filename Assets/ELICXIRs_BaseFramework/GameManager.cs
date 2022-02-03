@@ -219,7 +219,6 @@ public class GameManager : MonoBehaviour
         {
             Next_GameState = state;
             Next_GameScene = scene;
-            print(Next_GameScene);
         }
     }
     bool scenequeueflag = false;
@@ -233,8 +232,6 @@ public class GameManager : MonoBehaviour
 
         Pre_GameState = Now_GameState;
         Now_GameState = gamestate.Undefined;
-
-        print(Next_GameScene);
 
         AsyncOperation async = SceneManager.LoadSceneAsync((int)Next_GameScene, LoadSceneMode.Additive);
         async.allowSceneActivation = false;
