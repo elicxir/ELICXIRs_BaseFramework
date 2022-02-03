@@ -65,7 +65,7 @@ public class InputSystemManager : MonoBehaviour
 
             if (GameManager.Game_Manager.DebugMode && Button)
             {
-                print($"input:{id}");
+                //print($"input:{id}");
             }
         }
 
