@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Game_Manager;
 
     [HideInInspector] public InputSystemManager Input;
+    [HideInInspector] public Camera Camera;
 
     public bool DebugMode;
     public bool DebugInput;
@@ -135,10 +136,14 @@ public class GameManager : MonoBehaviour
         {
             Input = GetComponentInChildren<InputSystemManager>();
         }
+        if (Camera == null)
+        {
+            Camera = FindObjectOfType<Camera>();
+        }
 
         for (int i = 0; i < Executers.Count(); i++)
         {
-            if (Executers[i] == null&&i!=1)
+            if (Executers[i] == null && i != 1)
             {
                 Debug.LogError("GameStateExecuter is null");
             }
@@ -190,38 +195,32 @@ public class GameManager : MonoBehaviour
 
 
     //gamestateのみを変更する場合
-    public void StateQueue(gamestate state = gamestate.Undefined)
+    public void StateQueue(gamestate state = gamestate.Undefined, gamescene scene = gamescene.GameManager)
     {
-        statequeueflag = true;
-        if (state == gamestate.Undefined)
-        {
-            Next_GameState = Pre_GameState;
-        }
-        else
-        {
-            Next_GameState = state;
-        }
-    }
-    bool statequeueflag = false;
-
-    //gamestateに加えてシーンも変更する場合
-    public void SceneQueue(gamestate state = gamestate.Undefined,gamescene scene = gamescene.GameManager)
-    {
-        scenequeueflag = true;
-        statequeueflag = true;
         if (scene == gamescene.GameManager)
         {
-            print("Invalid Operation");
+            statequeueflag = true;
+            if (state == gamestate.Undefined)
+            {
+                Next_GameState = Pre_GameState;
+            }
+            else
+            {
+                Next_GameState = state;
+            }
         }
         else
         {
+            scenequeueflag = true;
+            statequeueflag = true;
+
             Next_GameState = state;
             Next_GameScene = scene;
         }
     }
+
+    bool statequeueflag = false;
     bool scenequeueflag = false;
-
-
 
     IEnumerator SceneChange()
     {
@@ -385,7 +384,7 @@ public enum gamescene
 
 //SceneManagementFunctions
 public class SMF
-{    
+{
 
 
     public static Scene_Executer Get_Scene_Executer()

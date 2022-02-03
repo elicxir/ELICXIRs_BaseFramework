@@ -20,7 +20,7 @@ public class Scene2 : Scene_Executer
     {
         if (GM.Input.ButtonDown(Control.Button1))
         {
-            GM.SceneQueue(gamestate.Scene, gamescene.Scene1);
+            GM.StateQueue(gamestate.Scene, gamescene.Scene1);
         }
     }
 }
