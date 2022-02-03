@@ -36,8 +36,23 @@ GameManagerSceneは変更しないことをお勧めします。
 ### 初期状態について
 
 
+
+
 ---
-#### Miscs
+## その他役に立つ機能の紹介
+
+### Testクラス(Test.cs)
+デバッグ用の設定ができます。
+
+#### ShowLog
+以下のLogを表示するかのフラグ
+
+
+#### Log
+UnityのDebug.Log()に表示のオンオフ切り替えをつけました
+#### 
+
+### Miscs
 役に立つと思われる以下の機能を導入してあります。
 - EnumIndex:配列にEnumの名前を付けてわかりやすくする。
     https://goropocha.hatenablog.com/entry/2021/02/11/232617

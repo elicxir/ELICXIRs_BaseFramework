@@ -106,10 +106,10 @@ public class InputSystemManager : MonoBehaviour
             log += "none";
 
         }
-
-        if (GameManager.Game_Manager.DebugInput && log != log_buffer)
+        
+        if(log != log_buffer)
         {
-            Debug.Log(log);
+            Test.InputLog(log);
         }
         log_buffer = log;
 

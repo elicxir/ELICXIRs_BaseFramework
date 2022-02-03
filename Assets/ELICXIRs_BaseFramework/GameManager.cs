@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public InputSystemManager Input;
 
-
-
     public bool DebugMode;
     public bool DebugInput;
 
@@ -108,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         if (Enum.GetNames(typeof(gamestate)).Length < 2)
         {
-            Debug.LogError("undefinedに加えて、最低1つのgamestateが必要です");
+            Test.LogError("undefinedに加えて、最低1つのgamestateが必要です");
             return;
         }
 
@@ -382,6 +380,8 @@ public enum gamescene
     Scene1,
     Scene2,
 }
+
+
 
 //SceneManagementFunctions
 public class SMF
