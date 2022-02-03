@@ -230,6 +230,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901476399781304576, guid: af1468d647299864196265403f9a9bcf, type: 3}
+      propertyPath: Test.log
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901476399781304576, guid: af1468d647299864196265403f9a9bcf, type: 3}
       propertyPath: DebugInput
       value: 1
       objectReference: {fileID: 0}

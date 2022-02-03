@@ -41,6 +41,16 @@ GameManagerSceneは変更しないことをお勧めします。
 ---
 ## その他役に立つ機能の紹介
 
+### バッチファイル
+#### add basesystem.bat
+ 
+このフレームワークをsubmoduleとして導入できます。(Asset配下のBaseSystemフォルダにこのリポジトリのAsset配下が導入されます。)
+
+#### update.bat
+
+submoduleの更新
+
+
 ### Testクラス(Test.cs)
 デバッグ用の設定ができます。
 
