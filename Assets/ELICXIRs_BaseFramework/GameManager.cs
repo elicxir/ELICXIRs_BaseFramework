@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
 
 
     public bool DebugMode;
+    public bool DebugInput;
 
-    
+
 
 
     public gamestate GameState => Now_GameState;

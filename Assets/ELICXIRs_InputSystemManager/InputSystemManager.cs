@@ -63,10 +63,7 @@ public class InputSystemManager : MonoBehaviour
             }
 
 
-            if (GameManager.Game_Manager.DebugMode && Button)
-            {
-                //print($"input:{id}");
-            }
+
         }
 
     }
@@ -87,12 +84,36 @@ public class InputSystemManager : MonoBehaviour
         }
     }
 
+    string log_buffer;
+
     public void Updater()
     {
+        string log = "input: ";
+        bool logflag = false;
+
         foreach (InputButton data in inputButtons)
         {
             data.Update();
+            if (data.Button)
+            {
+                log += data.id;
+                log += " ";
+                logflag = true;
+            }
         }
+        if (!logflag)
+        {
+            log += "none";
+
+        }
+
+        if (GameManager.Game_Manager.DebugInput && log != log_buffer)
+        {
+            Debug.Log(log);
+        }
+        log_buffer = log;
+
+
     }
 
     int GetIndex(string id)
