@@ -22,7 +22,7 @@ public class Title : GameStateExecuter_Panel
     public override void Updater()
     {
         if(GM.Input.ButtonDown(Control.Button1)){
-            GM.StateQueue(gamestate.MainGame);
+            GM.SceneQueue(gamestate.Scene, gamescene.Scene2);
         }
     }
 

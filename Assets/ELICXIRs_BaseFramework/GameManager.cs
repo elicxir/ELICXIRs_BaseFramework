@@ -182,12 +182,13 @@ public class GameManager : MonoBehaviour
     {
         Input.Init();
 
+
         StateQueue(gamestate.Title);
 
     }
 
 
-
+    //gamestateのみを変更する場合
     public void StateQueue(gamestate state = gamestate.Undefined)
     {
         statequeueflag = true;
@@ -202,6 +203,61 @@ public class GameManager : MonoBehaviour
     }
     bool statequeueflag = false;
 
+    //gamestateに加えてシーンも変更する場合
+    public void SceneQueue(gamestate state = gamestate.Undefined,gamescene scene = gamescene.GameManager)
+    {
+        scenequeueflag = true;
+        statequeueflag = true;
+        if (scene == gamescene.GameManager)
+        {
+            print("Invalid Operation");
+        }
+        else
+        {
+            Next_GameState = state;
+            Next_GameScene = scene;
+        }
+    }
+    bool scenequeueflag = false;
+
+
+
+    IEnumerator SceneChange()
+    {
+        statequeueflag = false;
+        scenequeueflag = false;
+
+        Pre_GameState = Now_GameState;
+        Now_GameState = gamestate.Undefined;
+
+        AsyncOperation async = SceneManager.LoadSceneAsync((int)Next_GameScene, LoadSceneMode.Additive);
+        async.allowSceneActivation = false;
+
+        yield return StartCoroutine(Executers[(int)Pre_GameState].Finalizer(Next_GameState));
+
+        async.allowSceneActivation = true;
+        yield return new WaitUntil(() => SceneManager.GetSceneByBuildIndex((int)Next_GameState).isLoaded);
+
+        if (Now_GameScene != gamescene.GameManager)
+        {
+            print("unload");
+            SceneManager.UnloadSceneAsync((int)Now_GameScene);
+        }
+
+        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer();
+
+        yield return StartCoroutine(Executers[(int)Next_GameState].Init(Pre_GameState));
+
+        Now_GameState = Next_GameState;
+
+        if (DebugMode)
+        {
+            print($"GameState was Changed from {Pre_GameState} to {Now_GameState}");
+        }
+
+        yield break;
+
+    }
 
 
 
@@ -219,7 +275,11 @@ public class GameManager : MonoBehaviour
         Now_GameState = gamestate.Undefined;
 
         yield return StartCoroutine(Executers[(int)Pre_GameState].Finalizer(Next_GameState));
+
+        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer();
+
         yield return StartCoroutine(Executers[(int)Next_GameState].Init(Pre_GameState));
+
 
         Now_GameState = Next_GameState;
 
@@ -237,7 +297,15 @@ public class GameManager : MonoBehaviour
 
         if (statequeueflag)
         {
-            StartCoroutine(StateChange());
+            if (scenequeueflag)
+            {
+                StartCoroutine(SceneChange());
+            }
+            else
+            {
+                StartCoroutine(StateChange());
+
+            }
         }
 
         StateMachineUpdater();
@@ -317,18 +385,22 @@ public enum gamescene
 public class SMF
 {    
 
+
     public static Scene_Executer Get_Scene_Executer()
     {
-        GameObject @object = GameObject.FindGameObjectWithTag("SceneExecuter");
-        if (@object != null)
+        GameObject[] @object = GameObject.FindGameObjectsWithTag("SceneExecuter");
+        for (int i = 0; i < @object.Length; i++)
         {
-            if (@object.scene == SceneManager.GetSceneByBuildIndex((int)GameManager.Game_Manager.GameScene))
+            if (@object[i] != null)
             {
-                return @object.GetComponent<Scene_Executer>();
+                if (@object[i].scene == SceneManager.GetSceneByBuildIndex((int)GameManager.Game_Manager.GameScene))
+                {
+                    return @object[i].GetComponent<Scene_Executer>();
+                }
             }
         }
 
-        Debug.Log("SeceneExecuterError");
+        Debug.LogWarning("SeceneExecuterError");
         return null;
 
     }
