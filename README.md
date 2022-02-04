@@ -24,7 +24,7 @@ https://github.com/elicxir/batchfiles
 
 Asset配下にBaseSystemというフォルダが作成されるため競合しないようにしてください。
 
-Assets/BaseSystem配下には当機能以外のファイルをおかないようにしてください。意図せぬ消失を招く危険性があります。
+Assets/BaseSystem配下のファイルを変更するとupdateが失敗することがあります。その時はAssets/BaseSystemとAssets/BaseSystem_Customizeを削除し、gitmoduleからこのプロジェクトの情報を消した後初めからやり直してください。
 
 Assets/BaseSystem_Customize配下にはGameManager.csとGameEnums.csのファイルが追加されます。この二つのファイルは自分の作るゲームに合わせて書き換えてください。_
 
