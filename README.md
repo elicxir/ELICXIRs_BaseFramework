@@ -26,6 +26,8 @@ Asset”z‰º‚ÉBaseSystem‚Æ‚¢‚¤ƒtƒHƒ‹ƒ_‚ªì¬‚³‚ê‚é‚½‚ß‹£‡‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢
 
 Assets/BaseSystem”z‰º‚Ìƒtƒ@ƒCƒ‹‚ğ•ÏX‚·‚é‚Æupdate‚ª¸”s‚·‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·B‚»‚Ì‚ÍAssets/BaseSystem‚ÆAssets/BaseSystem_Customize‚ğíœ‚µAgitmodule‚©‚ç‚±‚ÌƒvƒƒWƒFƒNƒg‚Ìî•ñ‚ğÁ‚µ‚½Œã‰‚ß‚©‚ç‚â‚è’¼‚µ‚Ä‚­‚¾‚³‚¢B
 
+“Á‚ÉTemplate”z‰º‚Ìprefab‚ğXV‚µ‚Ä‚µ‚Ü‚¤‚È‚Ç‚Ìê‡‚ª‹N‚±‚è“¾‚é‚½‚ß’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢B(ƒRƒs[‚µ‚½Œã‚ÉUnpackPrefab‚ğ‚µ‚Ä‚¨‚­‚ÆˆÀSBScene‚É‚Â‚¢‚Ä‚à“¯—l)
+
 Assets/BaseSystem_Customize”z‰º‚É‚ÍGameManager.cs‚ÆGameEnums.cs‚Ìƒtƒ@ƒCƒ‹‚ª’Ç‰Á‚³‚ê‚Ü‚·B‚±‚Ì“ñ‚Â‚Ìƒtƒ@ƒCƒ‹‚Í©•ª‚Ìì‚éƒQ[ƒ€‚É‡‚í‚¹‚Ä‘‚«Š·‚¦‚Ä‚­‚¾‚³‚¢B_
 
 
