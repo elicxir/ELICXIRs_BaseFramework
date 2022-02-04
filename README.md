@@ -17,42 +17,22 @@ githubでこれから作成するunityのprojectを管理できるようにしましょう。
 - 作成したフォルダ全体を管理するgithubのリポジトリを作成する
 
 ### 2.当機能の導入
-当機能をsubmoduleとして導入します。Asset配下にBaseSystemというフォルダが作成されるため競合しないようにしてください。
+当機能をsubmoduleとして導入します。
 
-以下の通りに行うことで当機能のAsset配下のみをsubmoduleとして導入することができます。
+https://github.com/elicxir/batchfiles
+に従って導入してください。
 
-以下の手順を踏まないと不具合が起こるので必ず以下の手順に沿って導入を行ってください。
-
-```
-git submodule add --force https://github.com/elicxir/ELICXIRs_BaseFramework.git Assets/BaseSystem
-git commit -m "add base system"
-cd Assets/BaseSystem
-git config core.sparsecheckout true
-echo /Assets/ > ../../.git/modules/Assets/BaseSystem/info/sparse-checkout
-git read-tree -mu HEAD
-git submodule foreach git pull origin main
-```
-
-当機能を更新する際は以下の通りにしてください。
-
-```
-git submodule foreach git pull origin main
-```
+Asset配下にBaseSystemというフォルダが作成されるため競合しないようにしてください。
 
 Assets/BaseSystem配下には当機能以外のファイルをおかないようにしてください。意図せぬ消失を招く危険性があります。
 
-Assets/BaseSystem配下に当機能が導入されれば導入は成功です！
+Assets/BaseSystem_Customize配下にはGameManager.csとGameEnums.csのファイルが追加されます。この二つのファイルは自分の作るゲームに合わせて書き換えてください。_
 
 
 ## 利用方法について
 
 ### 1.GameManagerの作成
-当機能のGameManager_Baseクラスを継承してGameManagerクラスを作成します。
-
-作成の手順については
-
-
-
+Assets/BaseSystem_Customize配下にGameManager.csがあるためこれを使ってください。
 
 ### 
 
@@ -95,7 +75,7 @@ GameManagerSceneは変更しないことをお勧めします。
 ## その他役に立つ機能の紹介
 
 ### バッチファイル
-#### add basesystem.bat
+#### add_basesystem.bat
  
 このフレームワークをsubmoduleとして導入できます。(Asset配下のBaseSystemフォルダにこのリポジトリのAsset配下が導入されます。)
 

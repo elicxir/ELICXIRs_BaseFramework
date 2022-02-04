@@ -7,7 +7,6 @@ public enum gamestate
     Undefined,
     Scene,
     Loading,
-    Title,
 }
 
 public enum gamescene

@@ -26,7 +26,7 @@ public class GameManager_Base : MonoBehaviour
     gamestate Pre_GameState = gamestate.Undefined;
     gamestate Next_GameState = gamestate.Undefined;
 
-    gamescene Now_GameScene = gamescene.Scene1;
+    gamescene Now_GameScene = gamescene.GameManager;
     gamescene Next_GameScene = gamescene.GameManager;
 
 
@@ -126,7 +126,8 @@ public class GameManager_Base : MonoBehaviour
             }
         }
 
-        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer();
+        print("Loaded Scene Index is "+SMF.GetLoadedSceneIndex());
+
     }
 
 
@@ -145,7 +146,7 @@ public class GameManager_Base : MonoBehaviour
         {
             if (Executers[i] == null && i != 1)
             {
-                Debug.LogError("GameStateExecuter is null");
+                //Debug.LogError("GameStateExecuter is null");
             }
         }
 
@@ -184,12 +185,13 @@ public class GameManager_Base : MonoBehaviour
         GAME_AWAKE();
     }
 
-    void GAME_AWAKE()
+    protected virtual void GAME_AWAKE()
     {
         Input.Init();
 
+        Now_GameScene = (gamescene)SMF.GetLoadedSceneIndex();
 
-        StateQueue(gamestate.Title);
+        StateQueue(gamestate.Scene);
 
     }
 
@@ -243,7 +245,7 @@ public class GameManager_Base : MonoBehaviour
             SceneManager.UnloadSceneAsync((int)Now_GameScene);
         }
         Now_GameScene = Next_GameScene;
-        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer();
+        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer(Now_GameScene);
 
         yield return StartCoroutine(Executers[(int)Next_GameState].Init(Pre_GameState));
 
@@ -275,7 +277,7 @@ public class GameManager_Base : MonoBehaviour
 
         yield return StartCoroutine(Executers[(int)Pre_GameState].Finalizer(Next_GameState));
 
-        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer();
+        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer(Now_GameScene);
 
         yield return StartCoroutine(Executers[(int)Next_GameState].Init(Pre_GameState));
 
@@ -356,24 +358,42 @@ public class GameManager_Base : MonoBehaviour
 //SceneManagementFunctions
 public class SMF
 {
+    public static int GetLoadedSceneIndex()
+    {
+        if (SceneManager.sceneCount != 2)
+        {
+            Test.LogError("GameManagerSceneÇ∆èâä˙ÉVÅ[ÉìÇÃÇ›Çì«Ç›çûÇÒÇ≈Ç≠ÇæÇ≥Ç¢");
+            return -1;
+        }
 
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).buildIndex != 0)
+            {
+                return SceneManager.GetSceneAt(i).buildIndex;
+            }
 
-    public static Scene_Executer Get_Scene_Executer()
+        }
+
+        return 0;
+    }
+
+    public static Scene_Executer Get_Scene_Executer(gamescene gamescene)
     {
         GameObject[] @object = GameObject.FindGameObjectsWithTag("SceneExecuter");
         for (int i = 0; i < @object.Length; i++)
         {
             if (@object[i] != null)
             {
-                if (@object[i].scene == SceneManager.GetSceneByBuildIndex((int)GameManager.Game_Manager.GameScene))
+                Debug.Log(gamescene);
+
+                if (@object[i].scene == SceneManager.GetSceneByBuildIndex((int)gamescene))
                 {
-                    //Debug.Log(GameManager.Game_Manager.GameScene);
                     return @object[i].GetComponent<Scene_Executer>();
                 }
             }
         }
 
-        Debug.LogWarning("SeceneExecuterError");
         return null;
 
     }
