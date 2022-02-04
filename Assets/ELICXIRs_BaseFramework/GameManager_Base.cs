@@ -151,26 +151,6 @@ public class GameManager_Base : MonoBehaviour
         }
 
     }
-
-    //以下参照エラー検出用関数群
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     void Awake()
     {
         if (Game_Manager == null)
@@ -192,9 +172,7 @@ public class GameManager_Base : MonoBehaviour
         Now_GameScene = (gamescene)SMF.GetLoadedSceneIndex();
 
         StateQueue(gamestate.Scene);
-
     }
-
 
     //gamestateとgamesceneを変更可能 指定しない場合は直前stateへ戻りシーン変更は行われない
     public void StateQueue(gamestate state = gamestate.Undefined, gamescene scene = gamescene.GameManager)
@@ -238,14 +216,14 @@ public class GameManager_Base : MonoBehaviour
         yield return StartCoroutine(Executers[(int)Pre_GameState].Finalizer(Next_GameState));
 
         async.allowSceneActivation = true;
-        yield return new WaitUntil(() => SceneManager.GetSceneByBuildIndex((int)Next_GameState).isLoaded);
+        yield return new WaitUntil(() => SceneManager.GetSceneByBuildIndex((int)Next_GameScene).isLoaded);
 
         if (Now_GameScene != gamescene.GameManager)
         {
             SceneManager.UnloadSceneAsync((int)Now_GameScene);
         }
         Now_GameScene = Next_GameScene;
-        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer(Now_GameScene);
+        Executers[(int)gamestate.Scene] = SMF.Get_Scene_Executer(Next_GameScene);
 
         yield return StartCoroutine(Executers[(int)Next_GameState].Init(Pre_GameState));
 
@@ -259,14 +237,6 @@ public class GameManager_Base : MonoBehaviour
         yield break;
 
     }
-
-
-
-
-
-
-
-
 
     IEnumerator StateChange()
     {
@@ -305,7 +275,6 @@ public class GameManager_Base : MonoBehaviour
             else
             {
                 StartCoroutine(StateChange());
-
             }
         }
 
@@ -319,11 +288,6 @@ public class GameManager_Base : MonoBehaviour
     {
         StateMachineFixedUpdater();
     }
-
-
-
-
-
 
     void StateMachineUpdater()
     {
