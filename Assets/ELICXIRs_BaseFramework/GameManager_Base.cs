@@ -4,10 +4,10 @@ using UnityEngine;
 using System.Linq;
 using System;
 using UnityEngine.SceneManagement;
-public class GameManager : MonoBehaviour
+public class GameManager_Base : MonoBehaviour
 {
     //GameManager‚ÌƒVƒ“ƒOƒ‹ƒgƒ“‰»
-    public static GameManager Game_Manager;
+    public static GameManager_Base Game_Manager;
 
     [HideInInspector] public InputSystemManager Input;
     [HideInInspector] public Camera Camera;
@@ -347,38 +347,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [ContextMenu("c")]
-    void CheckScene()
-    {
-        print(SceneManager.GetSceneByBuildIndex(0).isLoaded);
-        print(SceneManager.GetSceneByBuildIndex(1).isLoaded);
-        print(SceneManager.GetSceneAt(0).name);
-        print(SceneManager.GetSceneAt(1).name);
-        print(SceneManager.GetSceneAt(2).name);
-        print(SceneManager.GetSceneAt(3).name);
-
-
-    }
-
-
 }
 
 
-public enum gamestate
-{
-    Undefined,
-    Scene,
-    Loading,
-    MainGame,
-    Title,
-}
-
-public enum gamescene
-{
-    GameManager,
-    Scene1,
-    Scene2,
-}
 
 
 
