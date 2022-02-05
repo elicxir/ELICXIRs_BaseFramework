@@ -10,7 +10,8 @@ public class GameManager_Base : MonoBehaviour
     public static GameManager_Base Game_Manager;
 
     [HideInInspector] public InputSystemManager Input;
-    [HideInInspector] public Camera Camera;
+    [HideInInspector] public CameraManager Camera;
+    [HideInInspector] public SoundManager SoundManager;
 
     public bool DebugMode;
     public bool DebugInput;
@@ -103,7 +104,7 @@ public class GameManager_Base : MonoBehaviour
 
 
     [ContextMenu("Set Executers")]
-    private void SetExecuters()
+    public void SetExecuters()
     {
         if (Enum.GetNames(typeof(gamestate)).Length < 2)
         {
@@ -113,7 +114,7 @@ public class GameManager_Base : MonoBehaviour
 
         Executers = new GameStateExecuter[Enum.GetNames(typeof(gamestate)).Length];
 
-        GameStateExecuter[] exs = GetComponentsInChildren<GameStateExecuter>();
+        GameStateExecuter[] exs = FindObjectsOfType<GameStateExecuter>();
 
         foreach (var item in exs)
         {
@@ -139,7 +140,12 @@ public class GameManager_Base : MonoBehaviour
         }
         if (Camera == null)
         {
-            Camera = FindObjectOfType<Camera>();
+            Camera = FindObjectOfType<CameraManager>();
+        }
+        if(SoundManager == null)
+        {
+            SoundManager = GetComponentInChildren<SoundManager>();
+
         }
 
         for (int i = 0; i < Executers.Count(); i++)

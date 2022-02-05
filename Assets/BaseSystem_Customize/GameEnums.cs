@@ -15,3 +15,15 @@ public enum gamescene
     Scene1,
     Scene2,
 }
+
+public enum BGM
+{
+    BGM1,
+    BGM2,
+}
+
+public enum SE
+{
+    SE1,
+    SE2,
+}

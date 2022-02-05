@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Scene_Executer : GameStateExecuter
 {
+    private void Reset()
+    {
+        gameObject.tag = "SceneExecuter";
+        gameObject.name = "SceneExecuter";
+
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {

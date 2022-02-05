@@ -22,5 +22,10 @@ public class Scene2 : Scene_Executer
         {
             GM.StateQueue(gamestate.Scene, gamescene.Scene1);
         }
+        /*
+        if (GM.Input.ButtonDown(Control.Button2))
+        {
+            GM.SoundManager.PlaySE(SE.SE1,new Vector3(100,100,0));
+        }*/
     }
 }

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GameStateExecuter : MonoBehaviour
 {
+    private void Reset()
+    {
+        
+    }
+
+
+
     public GameManager GM
     {
         get
