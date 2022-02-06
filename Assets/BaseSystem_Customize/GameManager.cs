@@ -7,20 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : GameManager_Base
 {
-    new public static GameManager Game_Manager;
-
-    void Awake()
+    //static•Ï”Game_Manager‚ÌŒ^•ÏX
+    new public static GameManager Game_Manager
     {
-        if (Game_Manager == null)
+        get
         {
-            Game_Manager = this;
+            return (GameManager)GameManager_Base.Game_Manager;
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+    
+    }
 
-        GAME_AWAKE();
+    protected override void GAME_AWAKE()
+    {
+        StateQueue(gamestate.Scene);
     }
 
 }

@@ -168,15 +168,20 @@ public class GameManager_Base : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        GAME_AWAKE_General();
+
         GAME_AWAKE();
+    }
+
+
+    void GAME_AWAKE_General()
+    {
+        Input.Init();
+        Now_GameScene = (gamescene)SMF.GetLoadedSceneIndex();
     }
 
     protected virtual void GAME_AWAKE()
     {
-        Input.Init();
-
-        Now_GameScene = (gamescene)SMF.GetLoadedSceneIndex();
-
         StateQueue(gamestate.Scene);
     }
 
