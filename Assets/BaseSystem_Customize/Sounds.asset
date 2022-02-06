@@ -18,3 +18,4 @@ MonoBehaviour:
   soundEffects:
   - {fileID: 8300000, guid: 782eb022c7bc5ff419271cbea641f65e, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
