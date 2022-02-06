@@ -8,7 +8,6 @@ public class Scene_Executer : GameStateExecuter
     {
         gameObject.tag = "SceneExecuter";
         gameObject.name = "SceneExecuter";
-
     }
 
 

@@ -14,6 +14,10 @@ public class CameraManager : MonoBehaviour
         }
     }
 
+
+
+
+
     public Vector3 Position
     {
         get { return Camera.transform.position; }

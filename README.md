@@ -26,17 +26,51 @@ Asset”z‰º‚ÉBaseSystem‚Æ‚¢‚¤ƒtƒHƒ‹ƒ_‚ªì¬‚³‚ê‚é‚½‚ß‹£‡‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢
 
 Assets/BaseSystem”z‰º‚Ìƒtƒ@ƒCƒ‹‚ğ•ÏX‚·‚é‚Æupdate‚ª¸”s‚·‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·B‚»‚Ì‚ÍAssets/BaseSystem‚ÆAssets/BaseSystem_Customize‚ğíœ‚µAgitmodule‚©‚ç‚±‚ÌƒvƒƒWƒFƒNƒg‚Ìî•ñ‚ğÁ‚µ‚½Œã‰‚ß‚©‚ç‚â‚è’¼‚µ‚Ä‚­‚¾‚³‚¢B
 
-“Á‚ÉTemplate”z‰º‚Ìprefab‚ğXV‚µ‚Ä‚µ‚Ü‚¤‚È‚Ç‚Ìê‡‚ª‹N‚±‚è“¾‚é‚½‚ß’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢B(ƒRƒs[‚µ‚½Œã‚ÉUnpackPrefab‚ğ‚µ‚Ä‚¨‚­‚ÆˆÀSBScene‚É‚Â‚¢‚Ä‚à“¯—l)
+“Á‚ÉTemplate”z‰º‚Ìprefab‚ğXV‚µ‚Ä‚µ‚Ü‚¤‚È‚Ç‚Ìê‡‚ª‹N‚±‚è“¾‚é‚½‚ß’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢B(Œãq‚·‚éè‡‚É]‚¤‚Æ‚æ‚¢‚Å‚µ‚å‚¤)
 
-Assets/BaseSystem_Customize”z‰º‚É‚ÍGameManager.cs‚ÆGameEnums.cs‚Ìƒtƒ@ƒCƒ‹‚ª’Ç‰Á‚³‚ê‚Ü‚·B‚±‚Ì“ñ‚Â‚Ìƒtƒ@ƒCƒ‹‚Í©•ª‚Ìì‚éƒQ[ƒ€‚É‡‚í‚¹‚Ä‘‚«Š·‚¦‚Ä‚­‚¾‚³‚¢B_
+Assets/BaseSystem_Customize”z‰º‚É‚ÍGameManager.cs‚ÆGameEnums.cs‚È‚Ç‚Ìƒtƒ@ƒCƒ‹‚ª’Ç‰Á‚³‚ê‚Ü‚·B‚±‚ê‚ç‚Ìƒtƒ@ƒCƒ‹‚Í©•ª‚ÌƒQ[ƒ€‚É‡‚í‚¹‚ÄƒJƒXƒ^ƒ}ƒCƒY‚µ‚Ä‚­‚¾‚³‚¢B
+
+
 
 
 ## —˜—p•û–@‚É‚Â‚¢‚Ä
+ˆÈ‰º‚Ìì‹Æ‚Í‚·‚×‚ÄAssets/BaseSystem”z‰ºˆÈŠO‚ÌêŠ‚Ås‚Á‚Ä‚­‚¾‚³‚¢B
 
-### 1.GameManager‚Ìì¬
-Assets/BaseSystem_Customize”z‰º‚ÉGameManager.cs‚ª‚ ‚é‚½‚ß‚±‚ê‚ğg‚Á‚Ä‚­‚¾‚³‚¢B
+### 1.GameManagerScene‚Ìì¬
+GameManagerScene‚ÍƒQ[ƒ€‘S‘Ì‚Ìƒ}ƒl[ƒWƒƒ“ƒg‚ğs‚¤ƒV[ƒ“‚Ì‚±‚Æ‚Å‚·Bí‚É“Ç‚İ‚Ü‚ê‚Ä‚¨‚èAƒXƒe[ƒg‘JˆÚ‚âƒTƒEƒ“ƒhŠÇ—‚ğs‚Á‚Ä‚¢‚Ü‚·B
 
-### 
+ƒV[ƒ“‚ğì¬‚µ‚Ü‚·B(‚±‚±‚Å‚ÍGameManagerScene‚Æ‚µ‚Ü‚·)
+
+Assets/BaseSystem/Assets/Template‚ÌGameManager.prefab‚ğì¬‚µ‚½ƒV[ƒ“ã‚É”z’uB
+
+buildsettings‚ÅƒV[ƒ“‚ğ“o˜^‚µ‚Ä‚­‚¾‚³‚¢B‚»‚ÌÛAindex‚Í0‚É‚È‚é‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢B
+
+### 2.Scene‚Ìì¬
+
+ƒV[ƒ“‚ğ’Ç‰Á‚·‚éÛ‚Ìè‡‚ÍˆÈ‰º‚Ì’Ê‚è‚Å‚·B
+
+ƒV[ƒ“‚ğì¬‚µ‚Ü‚·B(‚±‚±‚Å‚ÍTestScene‚Æ‚µ‚Ü‚·)
+
+GameEnums.cs‚Ìgamescene‚É‘Î‰‚·‚é’l‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢(TestScene‚Æ‚µ‚Ü‚·)
+
+buildsettings‚ÅƒV[ƒ“‚ğ“o˜^‚µ‚Ä‚­‚¾‚³‚¢B‚»‚ÌÛAgamescene‚Ì‡”Ô‚ÉƒV[ƒ“‚Ìindex‚ğ‚»‚ë‚¦‚Ä‚­‚¾‚³‚¢B
+
+Scene_Executer.cs‚ğŒp³‚µ‚½ŠÇ—ƒNƒ‰ƒX‚ğì¬‚µ‚Ä‚­‚¾‚³‚¢B
+
+ƒV[ƒ“ã‚ÉgameObject‚ğì¬‚µA‚»‚±‚ÉŠÇ—ƒNƒ‰ƒX‚ğƒAƒ^ƒbƒ`‚·‚ê‚Î€”õŠ®—¹‚Å‚·(Object‚Ì–¼‘O‚ª•Ï‚í‚è‚Ü‚·B)
+
+### 3.State‚Ì’Ç‰Á
+
+ƒV[ƒ“ˆË‘¶‚Å‚Í‚È‚¢GameState‚ğ’Ç‰Á‚·‚éÛ‚É‚ÍˆÈ‰º‚Ìè‡‚É]‚Á‚Ä‚­‚¾‚³‚¢B
+
+GameStateExecuter.cs‚ğŒp³‚µ‚½ŠÇ—ƒNƒ‰ƒX‚ğì‚éBŠÇ—ƒNƒ‰ƒX‚Ì–¼‘O‚Í’Ç‰Á‚µ‚½GameState–¼‚Æˆê’v‚³‚¹‚Ä‚­‚¾‚³‚¢B
+
+gameObject‚ğì¬‚µ(–¼‘O‚Í’Ç‰Á‚µ‚½GameState–¼‚Æˆê’v‚³‚¹‚Ä‚­‚¾‚³‚¢)AŠÇ—ƒNƒ‰ƒX‚ğƒAƒ^ƒbƒ`‚µ‚ÄGameManagerScene‚É’u‚¢‚½GameManager.prefab‚ÌGameStateExecuters”z‰º‚É”z’u‚·‚éB
+
+
+
+
+
 
 
 
