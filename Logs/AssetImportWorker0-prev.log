@@ -15,7 +15,7 @@ D:/Unity/unityprojects/ELICXIRs_BaseFramework
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64670
+52899
 Successfully changed project path to: D:/Unity/unityprojects/ELICXIRs_BaseFramework
 D:/Unity/unityprojects/ELICXIRs_BaseFramework
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/Unity/unityprojects/ELICXIRs_BaseFramework
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 85.26 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 93.42 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008508 seconds.
+Registered in 0.009366 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 83.17 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 89.47 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.654 seconds
+- Completed reload, in  0.662 seconds
 Domain Reload Profiling:
-	ReloadAssembly (654ms)
-		BeginReloadAssembly (79ms)
+	ReloadAssembly (662ms)
+		BeginReloadAssembly (88ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (488ms)
-			LoadAssemblies (77ms)
+		EndReloadAssembly (486ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (127ms)
+			SetupTypeCache (110ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (262ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (288ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
+				InitializePlatformSupportModulesInManaged (17ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (83ms)
+				RefreshPlugins (90ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (120ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				ProcessInitializeOnLoadAttributes (129ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005705 seconds.
+Registered in 0.015442 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\unityprojects\ELICXIRs_BaseFramework\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Unity\unityprojects\ELICXIRs_BaseFramework\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 82.08 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 94.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.665 seconds
+- Completed reload, in  1.758 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1666ms)
-		BeginReloadAssembly (123ms)
+	ReloadAssembly (1759ms)
+		BeginReloadAssembly (116ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (1443ms)
-			LoadAssemblies (91ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1535ms)
+			LoadAssemblies (90ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (269ms)
+			SetupTypeCache (271ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (979ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (1072ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
-				BeforeProcessingInitializeOnLoad (85ms)
-				ProcessInitializeOnLoadAttributes (761ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (95ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (822ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4256 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 46 unused Assets / (225.4 KB). Loaded Objects now: 4708.
-Memory consumption went from 160.2 MB to 160.0 MB.
-Total: 3.760200 ms (FindLiveObjects: 0.363900 ms CreateObjectMapping: 0.276600 ms MarkObjects: 2.907100 ms  DeleteObjects: 0.211200 ms)
+Unloading 46 unused Assets / (225.3 KB). Loaded Objects now: 4708.
+Memory consumption went from 160.1 MB to 159.8 MB.
+Total: 3.563800 ms (FindLiveObjects: 0.371600 ms CreateObjectMapping: 0.350200 ms MarkObjects: 2.691400 ms  DeleteObjects: 0.149300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,309 +159,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 67078.027999 seconds.
+  Time since last request: 82908.763033 seconds.
   path: Assets/ELICXIRs_BaseFramework/GameManager_Base.cs
   artifactKey: Guid(d85ed4a905cb6bb4e90fac31e4bab576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ELICXIRs_BaseFramework/GameManager_Base.cs using Guid(d85ed4a905cb6bb4e90fac31e4bab576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd0cf35ccde02a569e95472ffd4592f') in 0.021032 seconds 
+Start importing Assets/ELICXIRs_BaseFramework/GameManager_Base.cs using Guid(d85ed4a905cb6bb4e90fac31e4bab576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb2b46a7d1ee7d2ff292fc58bc33cf91') in 0.029265 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.474751 seconds.
-  path: Assets/ELICXIRs_BaseFramework/SoundManager.cs
-  artifactKey: Guid(83c9f4e52fe0f4144b15428b1f30633d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ELICXIRs_BaseFramework/SoundManager.cs using Guid(83c9f4e52fe0f4144b15428b1f30633d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81cc979c3f8a41fa1f6da4fab73cc3a1') in 0.001560 seconds 
+  Time since last request: 8.081876 seconds.
+  path: Assets/ELICXIRs_BaseFramework/GameStateExecuter/Scene_Executer.cs
+  artifactKey: Guid(b4886578ef5b4c94b90d92db840a631c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_BaseFramework/GameStateExecuter/Scene_Executer.cs using Guid(b4886578ef5b4c94b90d92db840a631c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47fb89e9d8ff8dfe684f215605b3247e') in 0.001627 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.451735 seconds.
-  path: Assets/Template/GameManager.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Template/GameManager.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759eb43a6d31db05166dc537cdef671e') in 0.009823 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.694413 seconds.
-  path: Assets/Scripts/GameManager.unity
-  artifactKey: Guid(8b25e0d4367846148bfdc722ee65eb63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.unity using Guid(8b25e0d4367846148bfdc722ee65eb63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b20d426630a89ac1fe7146c8a270f60') in 0.001350 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 619.784735 seconds.
-  path: Assets/Template/GameManager.prefab
-  artifactKey: Guid(af1468d647299864196265403f9a9bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Template/GameManager.prefab using Guid(af1468d647299864196265403f9a9bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SetAudioSource
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:23)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 23)
-
-SE_Source (15)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (14)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (13)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (12)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (11)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (10)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (9)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (8)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (7)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (6)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (5)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (4)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (3)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (2)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source (1)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-SE_Source
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
-Sound
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-UnityEngine.MonoBehaviour:print (object)
-SoundManager:SetSource () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:28)
-SoundManager:OnValidate () (at Assets/ELICXIRs_BaseFramework/SoundManager.cs:17)
-
-(Filename: Assets/ELICXIRs_BaseFramework/SoundManager.cs Line: 28)
-
- -> (artifact id: '0539ca5c264a2d63be822f1175ddca3f') in 0.034632 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 64.972488 seconds.
-  path: Assets/Scenes/Scene1.unity
-  artifactKey: Guid(c1622d5eea0d11b4a9274dfe133a62e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Scene1.unity using Guid(c1622d5eea0d11b4a9274dfe133a62e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1e2782037ceaa07ef5bff69454c6095') in 0.001545 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.217792 seconds.
-  path: Assets/Scenes/GameManager.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameManager.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f3e81854f9c6d2ae8250053ab194e6') in 0.001348 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1454.162591 seconds.
-  path: Assets/Scenes/GameManager.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameManager.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5538e922c7b47b27f9590cf508b88616') in 0.001610 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.835829 seconds.
-  path: Assets/Scenes/GameManagerScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/GameManagerScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c38c554c4401fcdc5212c483fc653ea') in 0.001604 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004784 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\unityprojects\ELICXIRs_BaseFramework\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity\unityprojects\ELICXIRs_BaseFramework\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.076 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1077ms)
-		BeginReloadAssembly (158ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (51ms)
-		EndReloadAssembly (827ms)
-			LoadAssemblies (94ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (227ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (431ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (318ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4251 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (192.1 KB). Loaded Objects now: 4712.
-Memory consumption went from 160.4 MB to 160.2 MB.
-Total: 3.633200 ms (FindLiveObjects: 0.308500 ms CreateObjectMapping: 0.197400 ms MarkObjects: 2.973400 ms  DeleteObjects: 0.152600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 10.229403 seconds.
+  path: Assets/ELICXIRs_InputSystemManager/InputSystemManager.prefab
+  artifactKey: Guid(e54e8b4566fbcdf4b8320d57449a774a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_InputSystemManager/InputSystemManager.prefab using Guid(e54e8b4566fbcdf4b8320d57449a774a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '502dc0c2e64de1506b9af3f7c07e0971') in 0.035607 seconds 
