@@ -16,8 +16,6 @@ public class GameManager_Base : MonoBehaviour
     public bool DebugMode;
     public bool DebugInput;
 
-    [SerializeField] ObjectManager<ManagedObject> manager=new ObjectManager<ManagedObject>();
-
 
     public gamestate GameState => Now_GameState;
 

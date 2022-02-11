@@ -11,16 +11,20 @@ public class ManagedObject : IndividualTimeMonoBehaviour
     //This function will be called when this gameObject is instantiated (called only once)
     public virtual void FirstIniter()
     {
+        IndividualTimeSinceStart = 0;
     }
 
     //This function will be called when this gameObject get actived 
     public virtual void Initer()
     {
+        IndividualTimeSinceStart = 0;
+
     }
 
     //This function will be called every frame when this gameobject is active
     public virtual void Updater()
     {
+        IndividualTimeSinceStart +=I_deltaTime;
 
     }
 
