@@ -11,13 +11,11 @@ public class ManagedObject : IndividualTimeMonoBehaviour
     //This function will be called when this gameObject is instantiated (called only once)
     public virtual void FirstIniter()
     {
-
     }
 
     //This function will be called when this gameObject get actived 
     public virtual void Initer()
     {
-
     }
 
     //This function will be called every frame when this gameobject is active

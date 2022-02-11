@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4725109333774324847, guid: af1468d647299864196265403f9a9bcf, type: 3}
+      propertyPath: manager.ObjectList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725109335829937178, guid: af1468d647299864196265403f9a9bcf, type: 3}
       propertyPath: m_Name
       value: GameStateExecuters

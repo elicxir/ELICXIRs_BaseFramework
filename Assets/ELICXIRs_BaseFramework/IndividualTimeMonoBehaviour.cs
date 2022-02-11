@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IndividualTimeMonoBehaviour : MonoBehaviour
 {
-    float IndividualTimeSinceStart = 0;
+    protected float IndividualTimeSinceStart = 0;
 
     public bool TimeProgressFlag
     {
@@ -30,4 +30,11 @@ public class IndividualTimeMonoBehaviour : MonoBehaviour
         }
     }
 
+    public float I_deltaTime
+    {
+        get
+        {
+            return TimeProgressMult*Time.deltaTime;
+        }
+    }
 }
