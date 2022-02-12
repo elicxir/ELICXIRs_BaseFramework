@@ -14,6 +14,7 @@ public class GameManager_Base : MonoBehaviour
     [HideInInspector] public SoundManager SoundManager;
     [HideInInspector] public Event Event;
 
+    [SerializeField] public System_Window window;
 
 
     public bool DebugMode;

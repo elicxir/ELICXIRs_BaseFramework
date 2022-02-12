@@ -86,3 +86,15 @@ static class MonoBehaviourExtensions
 
 }
 
+static class RectExtensions
+{
+    public static Rect Rect_CS(Vector2 center,Vector2 size)
+    {
+        Rect rect = Rect.zero;
+
+        rect.size = size;
+        rect.center = center;
+
+        return rect;
+    }
+}
