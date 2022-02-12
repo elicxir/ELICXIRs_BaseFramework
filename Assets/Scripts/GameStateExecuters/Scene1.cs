@@ -22,5 +22,18 @@ public class Scene1 : Scene_Executer
         {
             GM.StateQueue(gamestate.Scene, gamescene.Scene2);
         }
+
+        if (GM.Input.ButtonDown(Control.Button2))
+        {
+            GM.window.Switch();
+        }
+        if (GM.Input.ButtonDown(Control.Button3))
+        {
+            GM.window.SetRectInstantly(RectExtensions.Rect_CS(GM.window.GetPos, GM.window.GetMinSize));
+        }
+        if (GM.Input.ButtonDown(Control.Button4))
+        {
+            GM.window.SetRectInstantly(RectExtensions.Rect_CS(GM.window.GetPos, GM.window.GetMinSize*4));
+        }
     }
 }
