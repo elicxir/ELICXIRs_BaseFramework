@@ -10,7 +10,24 @@ public class System_Window : MonoBehaviour
     CanvasGroup canvasGroup;
     Image window;
 
-    [SerializeField] Sprite sp;
+    [SerializeField] AnimationCurve curve_X;
+    [SerializeField] AnimationCurve curve_Y;
+
+    private void Awake()
+    {
+        if (WindowRect == null)
+        {
+            WindowRect = GetComponent<RectTransform>();
+        }
+        if (canvasGroup == null)
+        {
+            canvasGroup = GetComponent<CanvasGroup>();
+        }
+        if (window == null)
+        {
+            window = GetComponent<Image>();
+        }
+    }
 
     private void OnValidate()
     {
@@ -69,10 +86,10 @@ public class System_Window : MonoBehaviour
         WindowRect.anchoredPosition = rect.center;
 
     }
-    public void SetRectInstantly(Vector2 center,Vector2 size)
+    public void SetRectInstantly(Vector2 center, Vector2 size)
     {
 
-        SetRectInstantly(RectExtensions.Rect_CS(center, size));
+        SetRectInstantly(RectEX.Rect_CS(center, size));
     }
 
 
@@ -81,7 +98,7 @@ public class System_Window : MonoBehaviour
     {
         get
         {
-            return new Vector2(window.sprite.border.x + window.sprite.border.z, window.sprite.border.y + window.sprite.border.w);
+            return new Vector2(Mathf.RoundToInt(window.sprite.border.x + window.sprite.border.z), Mathf.RoundToInt(window.sprite.border.y + window.sprite.border.w));
         }
     }
     public Vector2 GetPos
@@ -93,28 +110,59 @@ public class System_Window : MonoBehaviour
     }
 
     //éûä‘ÇÇ©ÇØÇƒà íuÇ∆ëÂÇ´Ç≥ÇïœçX
-    public IEnumerator SetRect(Rect rect, float time)
+    public IEnumerator SetRect(Rect rect, float time, bool reverse = false)
     {
-        Vector2 c_b = WindowRect.anchoredPosition;
-        Vector2 c_a = rect.center;
+        float c_b_x = WindowRect.anchoredPosition.x;
+        float c_b_y = WindowRect.anchoredPosition.y;
 
-        Vector2 s_b = WindowRect.sizeDelta;
-        Vector2 s_a = rect.size;
+        float c_a_x = rect.center.x;
+        float c_a_y = rect.center.y;
+
+        float s_b_x = WindowRect.sizeDelta.x;
+        float s_b_y = WindowRect.sizeDelta.y;
+
+        float s_a_x = rect.size.x;
+        float s_a_y = rect.size.y;
 
         float timer = 0;
 
+        float L(float v1, float v2, float t, AnimationCurve c)
+        {
+            if (reverse)
+            {
+                return Mathf.Lerp(v1, v2, 1-c.Evaluate(1 - t / time));
+
+            }
+            else
+            {
+                return Mathf.Lerp(v1, v2, c.Evaluate(t / time));
+            }
+
+        }
+
         while (timer < time)
         {
-            WindowRect.sizeDelta = Vector2.Lerp(s_b, s_a, timer / time);
-            WindowRect.anchoredPosition = Vector2.Lerp(c_b, c_a, timer / time);
 
+
+            WindowRect.sizeDelta = new Vector2(L(s_b_x, s_a_x, timer, curve_X), L(s_b_y, s_a_y, timer, curve_Y));
+            WindowRect.anchoredPosition = new Vector2(L(c_b_x, c_a_x, timer, curve_X), L(c_b_y, c_a_y, timer, curve_Y));
+
+            timer += Time.deltaTime;
             yield return null;
         }
+
+        WindowRect.sizeDelta = rect.size;
+        WindowRect.anchoredPosition = rect.center;
     }
+
+
+
+
+
 
     public IEnumerator SetRect(Vector2 center, Vector2 size, float time)
     {
-        return SetRect(RectExtensions.Rect_CS(center, size),time);
+        return SetRect(RectEX.Rect_CS(center, size), time);
 
     }
 
