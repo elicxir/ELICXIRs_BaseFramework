@@ -14,7 +14,7 @@ public class GameManager_Base : MonoBehaviour
     [HideInInspector] public SoundManager SoundManager;
     [HideInInspector] public Event Event;
 
-    [SerializeField] public System_Window window;
+    [HideInInspector] public System_UI_Manager UI;
 
 
     public bool DebugMode;
@@ -152,6 +152,11 @@ public class GameManager_Base : MonoBehaviour
         if (Event == null)
         {
             Event = GetComponentInChildren<Event>();
+
+        }
+        if (UI == null)
+        {
+            UI = GetComponentInChildren<System_UI_Manager>();
 
         }
         for (int i = 0; i < Executers.Count(); i++)

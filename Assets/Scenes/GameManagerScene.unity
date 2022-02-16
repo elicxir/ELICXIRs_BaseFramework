@@ -130,26 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 528455118735093538, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 528455118735093538, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 528455118735093538, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 528455118735093538, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 528455118735093538, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 4725109333774324832, guid: af1468d647299864196265403f9a9bcf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -237,14 +217,6 @@ PrefabInstance:
     - target: {fileID: 4725109333774324845, guid: af1468d647299864196265403f9a9bcf, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725109333774324846, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725109333774324846, guid: af1468d647299864196265403f9a9bcf, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 720
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af1468d647299864196265403f9a9bcf, type: 3}
