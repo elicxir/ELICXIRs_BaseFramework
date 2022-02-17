@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-static class VectorExtensions
+static class VectorEX
 {
     /// <summary>
     /// X軸に平行なベクトルかどうか。
@@ -62,7 +62,7 @@ static class VectorExtensions
 }
 
 ///
-static class MonoBehaviourExtensions
+static class MonoBehaviourEX
 {
     /// <summary>
     /// ゲームオブジェクトがアクティブかどうか。bool値を渡すとゲームオブジェクトのアクティブ状態を変更可能
@@ -86,3 +86,15 @@ static class MonoBehaviourExtensions
 
 }
 
+static class RectEX
+{
+    public static Rect Rect_CS(Vector2 center,Vector2 size)
+    {
+        Rect rect = Rect.zero;
+
+        rect.size = size;
+        rect.center = center;
+
+        return rect;
+    }
+}

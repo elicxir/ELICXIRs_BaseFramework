@@ -12,6 +12,10 @@ public class GameManager_Base : MonoBehaviour
     [HideInInspector] public InputSystemManager Input;
     [HideInInspector] public CameraManager Camera;
     [HideInInspector] public SoundManager SoundManager;
+    [HideInInspector] public Event Event;
+
+    [HideInInspector] public System_UI_Manager UI;
+
 
     public bool DebugMode;
     public bool DebugInput;
@@ -145,7 +149,16 @@ public class GameManager_Base : MonoBehaviour
             SoundManager = GetComponentInChildren<SoundManager>();
 
         }
+        if (Event == null)
+        {
+            Event = GetComponentInChildren<Event>();
 
+        }
+        if (UI == null)
+        {
+            UI = GetComponentInChildren<System_UI_Manager>();
+
+        }
         for (int i = 0; i < Executers.Count(); i++)
         {
             if (Executers[i] == null && i != 1)
