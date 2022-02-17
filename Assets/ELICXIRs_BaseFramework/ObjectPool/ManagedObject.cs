@@ -9,8 +9,9 @@ public class ManagedObject : IndividualTimeMonoBehaviour
     protected object Manager;
 
     //This function will be called when this gameObject is instantiated (called only once)
-    public virtual void FirstIniter()
+    public virtual void FirstIniter(object manager)
     {
+        Manager = manager;
         IndividualTimeSinceStart = 0;
     }
 
