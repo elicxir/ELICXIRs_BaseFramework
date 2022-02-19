@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class System_Window : System_UI_element
 {
-    Image window;
+    public Image window;
 
     [SerializeField] AnimationCurve curve_X;
     [SerializeField] AnimationCurve curve_Y;
@@ -14,10 +14,7 @@ public class System_Window : System_UI_element
     protected override void SetReference()
     {
         base.SetReference();
-        if (window == null)
-        {
-            window = GetComponent<Image>();
-        }
+        this.SetRef(ref window);
     }
 
     public void SetSprite(Sprite sprite)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class System_UI_Manager : MonoBehaviour
 {
     public System_UI<System_Window> Windows = new System_UI<System_Window>();
+    public System_UI<System_Textbox> TextBoxes = new System_UI<System_Textbox>();
 
 }
 

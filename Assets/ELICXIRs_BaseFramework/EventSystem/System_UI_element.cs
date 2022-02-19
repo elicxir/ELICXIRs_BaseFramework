@@ -19,14 +19,8 @@ public class System_UI_element : MonoBehaviour
 
     protected virtual void SetReference()
     {
-        if (UIRect == null)
-        {
-            UIRect = GetComponent<RectTransform>();
-        }
-        if (canvasGroup == null)
-        {
-            canvasGroup = GetComponent<CanvasGroup>();
-        }
+        this.SetRef(ref UIRect);
+        this.SetRef(ref canvasGroup);
     }
 
     public void Show()
